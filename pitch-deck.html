@@ -1077,12 +1077,29 @@
 
         /* Mobile Optimization - iPhone 14 and similar devices */
         @media only screen and (max-width: 430px) {
+            body {
+                overflow: visible !important;
+            }
+
+            .presentation {
+                height: auto !important;
+                min-height: 100vh;
+                overflow: visible !important;
+            }
+
             .slide {
                 padding: 20px 16px !important;
                 justify-content: flex-start !important;
-                overflow-y: auto;
-                height: auto;
+                overflow-y: visible !important;
+                overflow-x: hidden !important;
+                height: auto !important;
                 min-height: 100vh;
+                -webkit-overflow-scrolling: touch;
+                display: flex !important;
+            }
+
+            .slide.active {
+                display: flex !important;
             }
 
             .slide h1 {
