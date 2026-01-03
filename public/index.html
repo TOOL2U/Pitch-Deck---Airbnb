@@ -1235,6 +1235,12 @@
                 letter-spacing: 0.02em !important;
             }
 
+            /* Table container - ensure full height visibility */
+            div[style*="overflow-x: auto"] {
+                max-height: none !important;
+                height: auto !important;
+            }
+
             /* === CARDS & BOXES === */
             .financial-item,
             .operations-card,
