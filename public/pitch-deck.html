@@ -1216,29 +1216,58 @@
             }
 
             /* === TABLES === */
+            /* Table container - must show ALL rows, only horizontal scroll */
+            div[style*="overflow-x: auto"] {
+                overflow-x: auto !important;
+                overflow-y: visible !important;
+                -webkit-overflow-scrolling: touch !important;
+                max-height: none !important;
+                height: auto !important;
+                min-height: 180px !important;
+            }
+
             table {
                 font-size: 9px !important;
-                display: table;
-                width: 100%;
-                min-width: 600px;
+                display: table !important;
+                width: max-content !important;
+                min-width: 500px !important;
+                border-collapse: collapse !important;
+                height: auto !important;
+            }
+
+            thead, tbody {
+                display: table-header-group !important;
+            }
+            
+            tbody {
+                display: table-row-group !important;
+            }
+
+            tr {
+                display: table-row !important;
+                height: auto !important;
             }
 
             table th,
             table td {
-                padding: 6px 8px !important;
+                padding: 14px 10px !important;
                 font-size: 9px !important;
-                white-space: nowrap;
+                white-space: nowrap !important;
+                display: table-cell !important;
             }
 
             table thead th {
                 font-size: 8px !important;
-                letter-spacing: 0.02em !important;
+                background: #0a0a0a !important;
+                color: white !important;
             }
 
-            /* Table container - ensure full height visibility */
-            div[style*="overflow-x: auto"] {
-                max-height: none !important;
-                height: auto !important;
+            table tbody tr {
+                background: white !important;
+            }
+
+            table tbody td {
+                color: #0a0a0a !important;
             }
 
             /* === CARDS & BOXES === */
@@ -1511,6 +1540,28 @@
             .timeline {
                 overflow-x: auto !important;
                 -webkit-overflow-scrolling: touch;
+            }
+
+            /* Nuclear override for mobile tables */
+            .mobile-table-container {
+                overflow-x: auto !important;
+                overflow-y: visible !important;
+                max-height: none !important;
+                height: auto !important;
+                display: block !important;
+                -webkit-overflow-scrolling: touch !important;
+            }
+            .mobile-table-container table {
+                display: table !important;
+                width: 100% !important;
+                min-width: 700px !important;
+                border-collapse: collapse !important;
+                font-size: 11px !important;
+            }
+            .mobile-table-container table th,
+            .mobile-table-container table td {
+                padding: 14px 12px !important;
+                white-space: nowrap !important;
             }
         }
 
@@ -1912,7 +1963,7 @@
                     </div>
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                        <img src="/Uploads/AI-images/image4.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                                               <img src="/Uploads/AI-images/image4.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                     </div>
                 </div>
             </div>
