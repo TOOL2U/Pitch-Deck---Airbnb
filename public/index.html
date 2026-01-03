@@ -1377,7 +1377,15 @@
             }
 
             .model-box-value {
-                font-size: 14px !important;
+                font-size: 13px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Description text inside model boxes */
+            .model-box div[style*="font-size: 13px"] {
+                font-size: 9px !important;
+                line-height: 1.5 !important;
+                margin-top: 8px !important;
             }
 
             /* Hide horizontal arrows on mobile, show vertical */
@@ -1622,24 +1630,47 @@
             <div class="model-diagram">
                 <div class="model-box">
                     <div class="model-box-label">Fixed Cost</div>
-                    <div class="model-box-value">Long-Term Lease</div>
+                    <div class="model-box-value">10-Year Registered Lease</div>
+                    <div style="font-size: 13px; color: #525252; margin-top: 12px; line-height: 1.5;">
+                        Predictable, capped housing cost<br>
+                        Downside protection vs nightly volatility
+                    </div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="model-box">
                     <div class="model-box-label">Operations</div>
-                    <div class="model-box-value">Professional Management</div>
+                    <div class="model-box-value">Centralized Property Management</div>
+                    <div style="font-size: 13px; color: #525252; margin-top: 12px; line-height: 1.5;">
+                        Standard renovation & furnishing<br>
+                        Shared staff across multiple units<br>
+                        AI-assisted scheduling & pricing
+                    </div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="model-box">
                     <div class="model-box-label">Variable Revenue</div>
                     <div class="model-box-value">Short-Term Stays</div>
+                    <div style="font-size: 13px; color: #525252; margin-top: 12px; line-height: 1.5;">
+                        Seasonal pricing upside<br>
+                        Occupancy-driven revenue growth
+                    </div>
                 </div>
             </div>
-            <ul style="margin-top: 50px;">
-                <li>Fixed long-term rental cost provides predictable floor</li>
-                <li>Margin created through operational efficiency and scale</li>
-                <li>Capital-light model with repeatable unit economics</li>
-            </ul>
+            
+            <div style="margin-top: 50px; padding: 20px 24px; background: #fafafa; border-left: 3px solid #0a0a0a; max-width: 900px; border-radius: 2px;">
+                <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Why It Works</div>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li style="font-size: 16px; margin-bottom: 12px;">Fixed long-term costs + variable short-term income</li>
+                    <li style="font-size: 16px; margin-bottom: 12px;">Margin expands with scale, not complexity</li>
+                    <li style="font-size: 16px; margin-bottom: 0;">Each additional unit improves portfolio efficiency</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 28px; padding: 14px 20px; background: #0a0a0a; color: white; border-radius: 2px; max-width: 900px;">
+                <div style="font-size: 14px; line-height: 1.6; color: #ffffff;">
+                    <strong>Unit breakeven ~60% occupancy</strong> · Target margins 20–22% at stabilized operations
+                </div>
+            </div>
         </div>
 
         <!-- Slide 5: Market Opportunity -->
