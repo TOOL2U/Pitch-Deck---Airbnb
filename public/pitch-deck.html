@@ -1465,17 +1465,7 @@
                 gap: 12px !important;
                 z-index: 1000 !important;
                 box-shadow: 0 -2px 8px rgba(0,0,0,0.05) !important;
-            }
-
-            /* Footer adapts to cover slide background */
-            .cover-slide.active ~ .controls {
-                background: #0a0a0a !important;
-                border-top: 1px solid #262626 !important;
-            }
-
-            .cover-slide.active ~ .controls button {
-                background: #ffffff !important;
-                color: #0a0a0a !important;
+                transition: background 0.3s ease, border-color 0.3s ease !important;
             }
 
             button {
@@ -1483,6 +1473,7 @@
                 font-size: 12px !important;
                 flex: 0 0 auto !important;
                 min-width: 100px !important;
+                transition: background 0.3s ease, color 0.3s ease !important;
             }
 
             /* === MODAL === */
@@ -2299,6 +2290,7 @@
             currentSlide = (n + totalSlides) % totalSlides;
             slides[currentSlide].classList.add('active');
             updateButtons();
+            updateFooterStyle();
         }
 
         function changeSlide(direction) {
@@ -2308,6 +2300,28 @@
         function updateButtons() {
             document.getElementById('prevBtn').disabled = currentSlide === 0;
             document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function updateFooterStyle() {
+            const controls = document.querySelector('.controls');
+            const currentSlideEl = slides[currentSlide];
+            
+            // Check if current slide is the cover slide
+            if (currentSlideEl.classList.contains('cover-slide')) {
+                controls.style.background = '#0a0a0a';
+                controls.style.borderTop = '1px solid #262626';
+                document.querySelectorAll('.controls button').forEach(btn => {
+                    btn.style.background = '#ffffff';
+                    btn.style.color = '#0a0a0a';
+                });
+            } else {
+                controls.style.background = '#ffffff';
+                controls.style.borderTop = '1px solid #e5e5e5';
+                document.querySelectorAll('.controls button').forEach(btn => {
+                    btn.style.background = '#0a0a0a';
+                    btn.style.color = '#fff';
+                });
+            }
         }
 
         // Image modal functions
@@ -2347,7 +2361,9 @@
             }
         });
 
+        // Initialize buttons and footer style
         updateButtons();
+        updateFooterStyle();
     </script>
 </body>
 </html>
