@@ -1093,7 +1093,7 @@
 
             .slide {
                 padding: 12px 10px !important;
-                padding-bottom: 10px !important;
+                padding-bottom: 80px !important;
                 justify-content: flex-start !important;
                 overflow-y: auto !important;
                 overflow-x: hidden !important;
@@ -1104,6 +1104,11 @@
 
             .slide.active {
                 display: flex !important;
+            }
+
+            /* Add bottom margin to all last children to prevent footer overlap */
+            .slide > *:last-child {
+                margin-bottom: 20px !important;
             }
 
             /* === TYPOGRAPHY HIERARCHY === */
@@ -1460,6 +1465,17 @@
                 gap: 12px !important;
                 z-index: 1000 !important;
                 box-shadow: 0 -2px 8px rgba(0,0,0,0.05) !important;
+            }
+
+            /* Footer adapts to cover slide background */
+            .cover-slide.active ~ .controls {
+                background: #0a0a0a !important;
+                border-top: 1px solid #262626 !important;
+            }
+
+            .cover-slide.active ~ .controls button {
+                background: #ffffff !important;
+                color: #0a0a0a !important;
             }
 
             button {
