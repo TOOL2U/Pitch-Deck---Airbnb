@@ -1077,12 +1077,13 @@
 
         /* Mobile Optimization - iPhone 14 and similar devices */
         @media only screen and (max-width: 430px) {
+            /* === BASE LAYOUT === */
             body {
                 overflow: hidden !important;
                 position: fixed;
                 width: 100%;
                 height: 100%;
-                font-size: 12px !important;
+                font-size: 10px !important;
             }
 
             .presentation {
@@ -1091,8 +1092,8 @@
             }
 
             .slide {
-                padding: 16px 12px !important;
-                padding-bottom: 70px !important;
+                padding: 12px 10px !important;
+                padding-bottom: 60px !important;
                 justify-content: flex-start !important;
                 overflow-y: auto !important;
                 overflow-x: hidden !important;
@@ -1105,51 +1106,113 @@
                 display: flex !important;
             }
 
+            /* === TYPOGRAPHY HIERARCHY === */
+            /* Main headings */
             .slide h1 {
-                font-size: 16px !important;
-                line-height: 1.15 !important;
-                margin-bottom: 6px !important;
+                font-size: 20px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 8px !important;
             }
 
             .slide h2 {
-                font-size: 15px !important;
-                line-height: 1.2 !important;
-                margin-bottom: 6px !important;
+                font-size: 18px !important;
+                line-height: 1.25 !important;
+                margin-bottom: 12px !important;
             }
 
+            /* Cover slide special sizing */
+            .cover-slide h1 {
+                font-size: 24px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 12px !important;
+            }
+
+            /* Headers and labels */
             .slide-header {
                 position: relative !important;
                 top: 0 !important;
                 left: 0 !important;
                 right: 0 !important;
-                margin-bottom: 10px !important;
+                margin-bottom: 8px !important;
                 padding: 0 !important;
             }
 
             .company-mark {
-                font-size: 7px !important;
+                font-size: 8px !important;
             }
 
             .slide-number {
-                font-size: 7px !important;
+                font-size: 8px !important;
             }
 
             .section-label {
-                font-size: 8px !important;
+                font-size: 9px !important;
                 margin-bottom: 8px !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Body text and descriptions */
+            .subtitle {
+                font-size: 11px !important;
+                line-height: 1.4 !important;
+            }
+
+            .location {
+                font-size: 10px !important;
                 line-height: 1.3 !important;
             }
 
-            /* Grid layouts become single column */
-            div[style*="display: grid"] {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 6px !important;
+            li {
+                font-size: 11px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 10px !important;
+                padding-left: 20px !important;
             }
 
-            /* Tables responsive - make them scrollable horizontally */
+            li:before {
+                width: 4px !important;
+                height: 4px !important;
+                top: 8px !important;
+            }
+
+            /* === DATA & METRICS === */
+            /* Large stats/numbers */
+            .stat-number,
+            .financial-value,
+            .comparison-metric {
+                font-size: 24px !important;
+                line-height: 1.1 !important;
+            }
+
+            /* Medium metrics */
+            .timeline-metric,
+            .model-box-value {
+                font-size: 18px !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Labels for stats */
+            .stat-label,
+            .financial-label,
+            .comparison-label,
+            .timeline-label,
+            .model-box-label {
+                font-size: 9px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Subtext and small labels */
+            .comparison-subtext,
+            .timeline-year,
+            .bar-label,
+            .point-label {
+                font-size: 9px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* === TABLES === */
             table {
-                font-size: 7px !important;
+                font-size: 9px !important;
                 display: block;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
@@ -1159,164 +1222,218 @@
 
             table th,
             table td {
-                padding: 4px 5px !important;
-                font-size: 6.5px !important;
+                padding: 6px 8px !important;
+                font-size: 9px !important;
                 white-space: nowrap;
             }
 
             table thead th {
-                font-size: 6px !important;
-                letter-spacing: 0.01em !important;
+                font-size: 8px !important;
+                letter-spacing: 0.02em !important;
             }
 
-            /* Text sizes - very compact */
-            div[style*="font-size: 14px"],
-            div[style*="font-size: 13px"],
-            div[style*="font-size: 12px"] {
-                font-size: 8px !important;
+            /* === CARDS & BOXES === */
+            .financial-item,
+            .operations-card,
+            .proof-item,
+            .risk-item,
+            .comparison-card,
+            .stat-item {
+                padding: 10px 12px !important;
+            }
+
+            .operations-title,
+            .risk-title,
+            .proof-text {
+                font-size: 11px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 6px !important;
+            }
+
+            .operations-description,
+            .risk-description {
+                font-size: 10px !important;
                 line-height: 1.5 !important;
             }
 
-            /* Larger text */
-            div[style*="font-size: 20px"] {
-                font-size: 11px !important;
-                line-height: 1.3 !important;
-            }
-
-            div[style*="font-size: 16px"] {
+            /* === INLINE TEXT OVERRIDES === */
+            /* Small text (11px, 12px, 13px desktop → 9px mobile) */
+            div[style*="font-size: 11px"],
+            div[style*="font-size: 12px"],
+            div[style*="font-size: 13px"] {
                 font-size: 9px !important;
                 line-height: 1.4 !important;
             }
 
-            /* Stats and metrics */
-            .stat-value,
-            div[style*="font-size: 48px"] {
+            /* Medium text (14px, 15px, 16px desktop → 10px mobile) */
+            div[style*="font-size: 14px"],
+            div[style*="font-size: 15px"],
+            div[style*="font-size: 16px"] {
+                font-size: 10px !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Medium-large text (18px, 20px desktop → 11px mobile) */
+            div[style*="font-size: 18px"],
+            div[style*="font-size: 20px"] {
+                font-size: 11px !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Large stats (28px, 36px, 38px desktop → 18px mobile) */
+            div[style*="font-size: 28px"],
+            div[style*="font-size: 36px"],
+            div[style*="font-size: 38px"] {
                 font-size: 18px !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Extra large stats (42px, 48px desktop → 24px mobile) */
+            div[style*="font-size: 42px"],
+            div[style*="font-size: 48px"] {
+                font-size: 24px !important;
                 line-height: 1.1 !important;
             }
 
-            div[style*="font-size: 36px"] {
-                font-size: 16px !important;
-            }
-
-            /* Cover slide */
-            .cover-slide h1 {
-                font-size: 18px !important;
-                line-height: 1.15 !important;
-            }
-
-            .cover-slide div[style*="font-size: 20px"] {
-                font-size: 10px !important;
-            }
-
-            .subtitle {
-                font-size: 10px !important;
-            }
-
-            .location {
-                font-size: 9px !important;
-            }
-
-            /* Callout boxes and info boxes - very compact */
+            /* === SPACING === */
+            /* Padding adjustments */
             div[style*="padding: 40px"],
+            div[style*="padding: 36px"],
+            div[style*="padding: 32px"],
             div[style*="padding: 30px"],
-            div[style*="padding: 24px"],
+            div[style*="padding: 28px"],
+            div[style*="padding: 24px"] {
+                padding: 10px 12px !important;
+            }
+
             div[style*="padding: 20px"],
             div[style*="padding: 18px 20px"],
-            div[style*="padding: 16px 20px"] {
-                padding: 6px 8px !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+            div[style*="padding: 16px 20px"],
+            div[style*="padding: 18px 22px"] {
+                padding: 8px 10px !important;
             }
 
-            /* Margins - very tight */
-            div[style*="margin-top: 40px"],
+            /* Top margins */
+            div[style*="margin-top: 60px"],
+            div[style*="margin-top: 50px"],
+            div[style*="margin-top: 40px"] {
+                margin-top: 16px !important;
+            }
+
+            div[style*="margin-top: 32px"],
             div[style*="margin-top: 30px"],
             div[style*="margin-top: 28px"],
             div[style*="margin-top: 24px"] {
-                margin-top: 8px !important;
+                margin-top: 12px !important;
             }
 
             div[style*="margin-top: 20px"],
             div[style*="margin-top: 16px"] {
-                margin-top: 6px !important;
+                margin-top: 8px !important;
             }
 
+            /* Bottom margins */
+            div[style*="margin-bottom: 32px"],
             div[style*="margin-bottom: 24px"],
             div[style*="margin-bottom: 20px"] {
+                margin-bottom: 10px !important;
+            }
+
+            div[style*="margin-bottom: 16px"],
+            div[style*="margin-bottom: 12px"],
+            div[style*="margin-bottom: 10px"] {
                 margin-bottom: 6px !important;
             }
 
-            div[style*="margin-bottom: 12px"],
-            div[style*="margin-bottom: 10px"],
-            div[style*="margin-bottom: 6px"] {
-                margin-bottom: 4px !important;
+            /* === GRIDS & LAYOUT === */
+            /* Grid layouts become single column */
+            .financial-grid,
+            .stat-grid,
+            .comparison-grid,
+            .operations-grid,
+            .proof-grid,
+            .risk-grid,
+            div[style*="display: grid"] {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
             }
 
-            /* Waterfall chart - make scrollable */
-            .waterfall-chart {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                max-width: 100%;
+            /* Gaps */
+            div[style*="gap: 40px"],
+            div[style*="gap: 32px"],
+            div[style*="gap: 30px"],
+            div[style*="gap: 24px"],
+            div[style*="gap: 20px"] {
+                gap: 10px !important;
             }
 
-            /* Image grids */
-            .image-grid {
-                gap: 6px !important;
+            div[style*="gap: 12px"] {
+                gap: 8px !important;
             }
 
+            /* === IMAGES === */
             .clickable-image {
                 max-width: 100% !important;
                 height: auto !important;
-                min-height: 100px !important;
+                min-height: 80px !important;
             }
 
-            /* Images in comparison grids */
+            img[style*="height: 240px"] {
+                height: 140px !important;
+            }
+
             img[style*="height: 200px"] {
-                height: 100px !important;
+                height: 120px !important;
             }
 
-            /* Controls - compact and touch-friendly */
+            .operations-icon {
+                width: 32px !important;
+                height: 32px !important;
+                margin-bottom: 8px !important;
+            }
+
+            /* === CHARTS === */
+            .bar-chart,
+            .growth-bars,
+            .waterfall-container {
+                height: 180px !important;
+                gap: 12px !important;
+            }
+
+            .bar-value,
+            .growth-value,
+            .point-value {
+                font-size: 11px !important;
+                top: -24px !important;
+            }
+
+            /* === CONTROLS === */
             .controls {
-                padding: 10px !important;
+                bottom: 10px !important;
+                left: 10px !important;
+                padding: 8px !important;
+                gap: 8px !important;
             }
 
-            .control-btn {
-                width: 36px !important;
-                height: 36px !important;
-                font-size: 14px !important;
+            button {
+                padding: 10px 18px !important;
+                font-size: 11px !important;
             }
 
-            /* Modal for images */
-            .modal {
-                padding: 12px !important;
-            }
-
+            /* === MODAL === */
             .modal-content {
                 max-width: 95% !important;
                 max-height: 85vh !important;
             }
 
-            /* Proof grid */
-            .proof-grid {
-                gap: 6px !important;
+            .modal-close {
+                top: 20px !important;
+                right: 30px !important;
+                font-size: 32px !important;
             }
 
-            .proof-item {
-                padding: 8px 10px !important;
-            }
-
-            /* Risk grid */
-            .risk-grid {
-                gap: 6px !important;
-            }
-
-            /* Max widths on mobile */
-            div[style*="max-width"] {
-                max-width: 100% !important;
-            }
-
-            /* Border boxes - thinner borders */
+            /* === BORDERS & MISC === */
             div[style*="border-left: 3px"] {
                 border-left-width: 2px !important;
             }
@@ -1325,10 +1442,16 @@
                 border-width: 1px !important;
             }
 
-            /* Gaps in flex containers */
-            div[style*="gap: 24px"],
-            div[style*="gap: 20px"] {
-                gap: 6px !important;
+            /* Max widths */
+            div[style*="max-width"] {
+                max-width: 100% !important;
+            }
+
+            /* Overflow handling for wide content */
+            .waterfall-chart,
+            .timeline {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
             }
         }
 
