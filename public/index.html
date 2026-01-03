@@ -1270,6 +1270,12 @@
                 color: #0a0a0a !important;
             }
 
+            /* Keep white text on dark backgrounds */
+            table tbody td[style*="background: #0a0a0a"],
+            table tbody td[style*="background:#0a0a0a"] {
+                color: white !important;
+            }
+
             /* === CARDS & BOXES === */
             .financial-item,
             .operations-card,
