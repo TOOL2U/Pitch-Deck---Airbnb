@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Investment Pitch Deck - Short-Term Accommodation Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -1071,6 +1074,282 @@
                 size: landscape;
             }
         }
+
+        /* Mobile Optimization - iPhone 14 and similar devices */
+        @media only screen and (max-width: 430px) {
+            body {
+                overflow: hidden !important;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                font-size: 12px !important;
+            }
+
+            .presentation {
+                height: 100vh !important;
+                overflow: hidden !important;
+            }
+
+            .slide {
+                padding: 16px 12px !important;
+                padding-bottom: 70px !important;
+                justify-content: flex-start !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                height: 100vh !important;
+                -webkit-overflow-scrolling: touch;
+                display: none;
+            }
+
+            .slide.active {
+                display: flex !important;
+            }
+
+            .slide h1 {
+                font-size: 16px !important;
+                line-height: 1.15 !important;
+                margin-bottom: 6px !important;
+            }
+
+            .slide h2 {
+                font-size: 15px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 6px !important;
+            }
+
+            .slide-header {
+                position: relative !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin-bottom: 10px !important;
+                padding: 0 !important;
+            }
+
+            .company-mark {
+                font-size: 7px !important;
+            }
+
+            .slide-number {
+                font-size: 7px !important;
+            }
+
+            .section-label {
+                font-size: 8px !important;
+                margin-bottom: 8px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Grid layouts become single column */
+            div[style*="display: grid"] {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 6px !important;
+            }
+
+            /* Tables responsive - make them scrollable horizontally */
+            table {
+                font-size: 7px !important;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+                min-width: 100%;
+            }
+
+            table th,
+            table td {
+                padding: 4px 5px !important;
+                font-size: 6.5px !important;
+                white-space: nowrap;
+            }
+
+            table thead th {
+                font-size: 6px !important;
+                letter-spacing: 0.01em !important;
+            }
+
+            /* Text sizes - very compact */
+            div[style*="font-size: 14px"],
+            div[style*="font-size: 13px"],
+            div[style*="font-size: 12px"] {
+                font-size: 8px !important;
+                line-height: 1.5 !important;
+            }
+
+            /* Larger text */
+            div[style*="font-size: 20px"] {
+                font-size: 11px !important;
+                line-height: 1.3 !important;
+            }
+
+            div[style*="font-size: 16px"] {
+                font-size: 9px !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Stats and metrics */
+            .stat-value,
+            div[style*="font-size: 48px"] {
+                font-size: 18px !important;
+                line-height: 1.1 !important;
+            }
+
+            div[style*="font-size: 36px"] {
+                font-size: 16px !important;
+            }
+
+            /* Cover slide */
+            .cover-slide h1 {
+                font-size: 18px !important;
+                line-height: 1.15 !important;
+            }
+
+            .cover-slide div[style*="font-size: 20px"] {
+                font-size: 10px !important;
+            }
+
+            .subtitle {
+                font-size: 10px !important;
+            }
+
+            .location {
+                font-size: 9px !important;
+            }
+
+            /* Callout boxes and info boxes - very compact */
+            div[style*="padding: 40px"],
+            div[style*="padding: 30px"],
+            div[style*="padding: 24px"],
+            div[style*="padding: 20px"],
+            div[style*="padding: 18px 20px"],
+            div[style*="padding: 16px 20px"] {
+                padding: 6px 8px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Margins - very tight */
+            div[style*="margin-top: 40px"],
+            div[style*="margin-top: 30px"],
+            div[style*="margin-top: 28px"],
+            div[style*="margin-top: 24px"] {
+                margin-top: 8px !important;
+            }
+
+            div[style*="margin-top: 20px"],
+            div[style*="margin-top: 16px"] {
+                margin-top: 6px !important;
+            }
+
+            div[style*="margin-bottom: 24px"],
+            div[style*="margin-bottom: 20px"] {
+                margin-bottom: 6px !important;
+            }
+
+            div[style*="margin-bottom: 12px"],
+            div[style*="margin-bottom: 10px"],
+            div[style*="margin-bottom: 6px"] {
+                margin-bottom: 4px !important;
+            }
+
+            /* Waterfall chart - make scrollable */
+            .waterfall-chart {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                max-width: 100%;
+            }
+
+            /* Image grids */
+            .image-grid {
+                gap: 6px !important;
+            }
+
+            .clickable-image {
+                max-width: 100% !important;
+                height: auto !important;
+                min-height: 100px !important;
+            }
+
+            /* Images in comparison grids */
+            img[style*="height: 200px"] {
+                height: 100px !important;
+            }
+
+            /* Controls - compact and touch-friendly */
+            .controls {
+                padding: 10px !important;
+            }
+
+            .control-btn {
+                width: 36px !important;
+                height: 36px !important;
+                font-size: 14px !important;
+            }
+
+            /* Modal for images */
+            .modal {
+                padding: 12px !important;
+            }
+
+            .modal-content {
+                max-width: 95% !important;
+                max-height: 85vh !important;
+            }
+
+            /* Proof grid */
+            .proof-grid {
+                gap: 6px !important;
+            }
+
+            .proof-item {
+                padding: 8px 10px !important;
+            }
+
+            /* Risk grid */
+            .risk-grid {
+                gap: 6px !important;
+            }
+
+            /* Max widths on mobile */
+            div[style*="max-width"] {
+                max-width: 100% !important;
+            }
+
+            /* Border boxes - thinner borders */
+            div[style*="border-left: 3px"] {
+                border-left-width: 2px !important;
+            }
+
+            div[style*="border: 2px"] {
+                border-width: 1px !important;
+            }
+
+            /* Gaps in flex containers */
+            div[style*="gap: 24px"],
+            div[style*="gap: 20px"] {
+                gap: 6px !important;
+            }
+        }
+
+        /* Tablet optimization (iPad, etc.) */
+        @media only screen and (min-width: 431px) and (max-width: 1024px) {
+            .slide {
+                padding: 60px 40px !important;
+            }
+
+            .slide h1 {
+                font-size: 36px !important;
+            }
+
+            .slide h2 {
+                font-size: 30px !important;
+            }
+
+            table {
+                font-size: 12px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1088,9 +1367,12 @@
                 </svg>
             </div>
             <div style="position: relative; z-index: 1;">
-                <h1>Short-Term Accommodation<br>Investment Portfolio</h1>
-                <div class="subtitle">Professionally Operated Rental Property Portfolio</div>
+                <!-- Company Branding -->
+                <div style="font-size: 14px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 20px;">Sia Moon Company Ltd.</div>
+                <h1>Short-Term Accommodation<br>Operations Portfolio</h1>
+                <div class="subtitle">Cash-Flow Property Operations Business</div>
                 <div class="location">Koh Phangan, Thailand</div>
+                <div style="font-size: 13px; color: #737373; margin-top: 40px; font-weight: 500;">Founded and operated by Shaun Ducker, Director</div>
             </div>
         </div>
 
@@ -1098,14 +1380,14 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">2 / 10</div>
+                <div class="slide-number">2 / 13</div>
             </div>
             <h2>The Problem</h2>
             <ul>
                 <li>Short-term rental market is fragmented and inconsistently managed</li>
                 <li>Most properties are owner-operated with limited systems</li>
-                <li>Property owners want stable income without daily operations</li>
-                <li>Guests experience inconsistent quality and reliability</li>
+                <li>Property owners want stable income without operational burden</li>
+                <li>Guests experience inconsistent quality across listings</li>
             </ul>
             <div class="chart-container">
                 <div class="bar-chart">
@@ -1141,14 +1423,14 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">3 / 10</div>
+                <div class="slide-number">3 / 13</div>
             </div>
             <h2>The Solution</h2>
             <ul>
-                <li>Secure long-term leases on under-optimised houses</li>
-                <li>Light, disciplined renovations to meet market standards</li>
-                <li>Centralised professional operations and service delivery</li>
-                <li>Short-term stays used to maximise revenue efficiency</li>
+                <li>Secure long-term leases (10 years) on residential properties</li>
+                <li>Renovate and furnish to consistent operational standards</li>
+                <li>Operate as short-term rentals with centralized management</li>
+                <li>Generate cash flow through disciplined operations</li>
             </ul>
             <div class="comparison-grid" style="margin-top: 50px;">
                 <div class="comparison-card">
@@ -1158,14 +1440,18 @@
                 </div>
                 <div class="comparison-card highlight">
                     <div class="comparison-label">Our Model</div>
-                    <div class="comparison-metric">20-22%</div>
+                    <div class="comparison-metric">~15%</div>
                     <div class="comparison-subtext">Net Margins</div>
                 </div>
                 <div class="comparison-card">
-                    <div class="comparison-label">Capital Required</div>
-                    <div class="comparison-metric">~100k</div>
+                    <div class="comparison-label">Setup Cost</div>
+                    <div class="comparison-metric">~160k</div>
                     <div class="comparison-subtext">THB per unit</div>
                 </div>
+            </div>
+            <div style="margin-top: 30px; padding: 16px 20px; background: #fafafa; border-left: 3px solid #0a0a0a; max-width: 800px;">
+                <div style="font-size: 12px; font-weight: 600; color: #0a0a0a; margin-bottom: 6px;">Setup Cost Breakdown</div>
+                <div style="font-size: 13px; line-height: 1.6; color: #0a0a0a;">100k renovation + 50k labor + 10k contingency. Payback: 12–14 months from operating cash flow.</div>
             </div>
         </div>
 
@@ -1173,7 +1459,7 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">4 / 10</div>
+                <div class="slide-number">4 / 13</div>
             </div>
             <h2>Business Model</h2>
             <div class="model-diagram">
@@ -1203,7 +1489,7 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">5 / 10</div>
+                <div class="slide-number">5 / 13</div>
             </div>
             <h2>Market Opportunity</h2>
             <div class="stat-grid">
@@ -1212,7 +1498,7 @@
                     <div class="stat-label">Year Leases</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">~580k</div>
+                    <div class="stat-number">~820k</div>
                     <div class="stat-label">THB Revenue/Unit</div>
                 </div>
                 <div class="stat-item">
@@ -1248,7 +1534,7 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">6 / 11</div>
+                <div class="slide-number">6 / 13</div>
             </div>
             <h2>Operations & Execution</h2>
             <div class="operations-grid">
@@ -1257,16 +1543,16 @@
                         <rect x="8" y="8" width="32" height="32" stroke="#0a0a0a" stroke-width="2"/>
                         <path d="M16 20h16M16 24h16M16 28h10" stroke="#0a0a0a" stroke-width="2"/>
                     </svg>
-                    <div class="operations-title">Standardised Setup</div>
-                    <div class="operations-description">Consistent furnishing and renovation templates across all properties</div>
+                    <div class="operations-title">Standardized Setup</div>
+                    <div class="operations-description">Consistent furnishing and renovation templates reduce costs and execution time</div>
                 </div>
                 <div class="operations-card">
                     <svg class="operations-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="24" cy="24" r="16" stroke="#0a0a0a" stroke-width="2"/>
                         <path d="M24 16v8l6 4" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    <div class="operations-title">AI-Assisted Systems</div>
-                    <div class="operations-description">Automated guest communication and scheduling tools</div>
+                    <div class="operations-title">Centralized Management</div>
+                    <div class="operations-description">Automated reporting, pricing tools, and booking coordination</div>
                 </div>
                 <div class="operations-card">
                     <svg class="operations-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1282,8 +1568,8 @@
                         <rect x="10" y="14" width="28" height="20" stroke="#0a0a0a" stroke-width="2"/>
                         <path d="M16 20h16M16 24h12M16 28h8" stroke="#0a0a0a" stroke-width="2"/>
                     </svg>
-                    <div class="operations-title">Central Reporting</div>
-                    <div class="operations-description">Real-time cost tracking and performance monitoring</div>
+                    <div class="operations-title">Cost Control</div>
+                    <div class="operations-description">Real-time expense tracking and performance monitoring per property</div>
                 </div>
             </div>
         </div>
@@ -1292,38 +1578,38 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">7 / 12</div>
+                <div class="slide-number">7 / 13</div>
             </div>
             <h2>Technology & AI Systems</h2>
             <div class="section-label">Proprietary Property Management Platform</div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; max-width: 1100px;">
                 <div>
-                    <img src="Uploads/AI-powered-website/Screenshot 2568-12-30 at 18.58.56.png" 
+                    <img src="/Uploads/AI-powered-website/screenshot1.png" 
                          alt="AI Dashboard Frontend" 
                          style="width: 100%; height: 240px; object-fit: cover; border-radius: 2px; border: 1px solid #e5e5e5;">
                     <div style="font-size: 12px; color: #737373; margin-top: 8px; text-align: center; font-weight: 500;">Guest-Facing Interface</div>
                 </div>
                 <div>
-                    <img src="Uploads/AI-powered-website/Screenshot 2568-12-30 at 18.59.32.png" 
+                    <img src="/Uploads/AI-powered-website/screenshot2.png" 
                          alt="AI Backend System" 
                          style="width: 100%; height: 240px; object-fit: cover; border-radius: 2px; border: 1px solid #e5e5e5;">
                     <div style="font-size: 12px; color: #737373; margin-top: 8px; text-align: center; font-weight: 500;">Operations Dashboard</div>
                 </div>
                 <div>
-                    <img src="Uploads/AI-powered-website/Screenshot 2568-12-30 at 19.21.24.png" 
+                    <img src="/Uploads/AI-powered-website/screenshot3.png" 
                          alt="AI Analytics System" 
                          style="width: 100%; height: 240px; object-fit: cover; border-radius: 2px; border: 1px solid #e5e5e5;">
                     <div style="font-size: 12px; color: #737373; margin-top: 8px; text-align: center; font-weight: 500;">Analytics & Reporting</div>
                 </div>
                 <div>
-                    <img src="Uploads/AI-powered-website/Screenshot 2568-12-30 at 19.22.37.png" 
+                    <img src="/Uploads/AI-powered-website/screenshot4.png" 
                          alt="AI Automation System" 
                          style="width: 100%; height: 240px; object-fit: cover; border-radius: 2px; border: 1px solid #e5e5e5;">
                     <div style="font-size: 12px; color: #737373; margin-top: 8px; text-align: center; font-weight: 500;">Automation Engine</div>
                 </div>
             </div>
             <ul style="margin-top: 40px;">
-                <li>Custom-built AI platform reduces operational overhead by 60%</li>
+                <li>Custom-built AI platform reduces operational overhead and improves consistency</li>
                 <li>Automated guest communication, booking, and scheduling</li>
                 <li>Real-time analytics and performance tracking across portfolio</li>
             </ul>
@@ -1333,39 +1619,39 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">8 / 12</div>
+                <div class="slide-number">8 / 13</div>
             </div>
-            <h2>AI-Powered Market Testing</h2>
-            <div class="section-label">Pre-Renovation Demand Validation Using AI Visualization</div>
+            <h2>Pre-Renovation Market Validation</h2>
+            <div class="section-label">Demand Testing Before Capital Deployment</div>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 24px 0 28px 0; max-width: 1100px;">
                 <div>
-                    <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Competitive Advantage</div>
+                    <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Operational Approach</div>
                     <ul style="margin: 0; padding-left: 20px; font-size: 12px; line-height: 1.5;">
-                        <li style="margin-bottom: 4px;">Properties listed before a single dollar spent on renovation</li>
-                        <li style="margin-bottom: 4px;">Real booking data validates design decisions and pricing strategy</li>
-                        <li style="margin-bottom: 4px;">Zero risk of building a property the market does not want</li>
-                        <li style="margin-bottom: 4px;">Competitors renovate blind—we renovate with confirmed demand</li>
+                        <li style="margin-bottom: 4px;">Generate visualization of finished property before renovation starts</li>
+                        <li style="margin-bottom: 4px;">List on booking platforms to gauge market interest and pricing</li>
+                        <li style="margin-bottom: 4px;">Collect booking inquiries to validate renovation decisions</li>
+                        <li style="margin-bottom: 4px;">Reduces risk of investing in wrong design or amenities</li>
                     </ul>
                 </div>
                 <div>
-                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Process Timeline</div>
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Timeline</div>
                     <div style="display: grid; gap: 10px;">
                         <div style="display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: start;">
                             <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Day 1</div>
-                            <div style="font-size: 14px; line-height: 1.6;">Sign lease, generate AI renders of finished property</div>
+                            <div style="font-size: 14px; line-height: 1.6;">Sign lease, create visualization of finished property</div>
                         </div>
                         <div style="display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: start;">
-                            <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Day 2</div>
-                            <div style="font-size: 14px; line-height: 1.6;">List on Airbnb with AI visuals, begin collecting bookings</div>
+                            <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Week 1</div>
+                            <div style="font-size: 14px; line-height: 1.6;">Test market response, validate pricing and design choices</div>
                         </div>
                         <div style="display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: start;">
-                            <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Week 1-2</div>
-                            <div style="font-size: 14px; line-height: 1.6;">Analyze demand, confirm renovation budget, start build</div>
+                            <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Week 2</div>
+                            <div style="font-size: 14px; line-height: 1.6;">Confirm renovation approach, begin work</div>
                         </div>
                         <div style="display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: start;">
                             <div style="background: #0a0a0a; color: white; padding: 6px 10px; border-radius: 2px; font-size: 12px; font-weight: 600; text-align: center;">Week 4</div>
-                            <div style="font-size: 14px; line-height: 1.6;">Property complete, first guests check in with pre-sold calendar</div>
+                            <div style="font-size: 14px; line-height: 1.6;">Property complete, guests check in</div>
                         </div>
                     </div>
                 </div>
@@ -1376,11 +1662,11 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Before</div>
-                        <img src="Uploads/Original-images/image 1.PNG" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
+                        <img src="/Uploads/Original-images/image1.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
                     </div>
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                        <img src="Uploads/AI-images/image 1.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                        <img src="/Uploads/AI-images/image1.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                     </div>
                 </div>
                 
@@ -1388,11 +1674,11 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Before</div>
-                        <img src="Uploads/Original-images/image 2.PNG" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
+                        <img src="/Uploads/Original-images/image2.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
                     </div>
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                        <img src="Uploads/AI-images/image 2.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                        <img src="/Uploads/AI-images/image2.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                     </div>
                 </div>
                 
@@ -1400,11 +1686,11 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Before</div>
-                        <img src="Uploads/Original-images/image 3.PNG" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
+                        <img src="/Uploads/Original-images/image3.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
                     </div>
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                        <img src="Uploads/AI-images/image 3.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                        <img src="/Uploads/AI-images/image3.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                     </div>
                 </div>
                 
@@ -1412,11 +1698,11 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Before</div>
-                        <img src="Uploads/Original-images/image 4.jpeg" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
+                        <img src="/Uploads/Original-images/image4.jpeg" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
                     </div>
                     <div style="text-align: center;">
                         <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                        <img src="Uploads/AI-images/image 4.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                        <img src="/Uploads/AI-images/image4.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                     </div>
                 </div>
             </div>
@@ -1425,18 +1711,18 @@
             <div style="display: flex; justify-content: center; gap: 12px; margin-top: 24px; max-width: 1100px;">
                 <div style="text-align: center; width: 265px;">
                     <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Before</div>
-                    <img src="Uploads/Original-images/image 5.PNG" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
+                    <img src="/Uploads/Original-images/image5.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #d4d4d4;">
                 </div>
                 <div style="text-align: center; width: 265px;">
                     <div style="font-size: 11px; font-weight: 600; color: #0a0a0a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">AI After</div>
-                    <img src="Uploads/AI-images/image 5.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
+                    <img src="/Uploads/AI-images/image5.png" class="clickable-image" onclick="openModal(this.src)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px; border: 2px solid #0a0a0a;">
                 </div>
             </div>
             
             <div style="background: #fafafa; padding: 20px 24px; border-radius: 2px; border: 2px solid #e5e5e5; margin-top: 28px; max-width: 1100px;">
-                <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Market Position</div>
+                <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Risk Reduction</div>
                 <div style="font-size: 15px; line-height: 1.7; color: #0a0a0a;">
-                    Traditional operators commit 80-120k THB to renovations based on intuition and market assumptions. We commit based on data—bookings secured before construction begins. This approach reduces risk, accelerates payback periods, and ensures every property is optimized for actual market demand rather than assumptions.
+                    Market testing before renovation reduces execution risk. Property design and amenities are validated against actual booking interest, not assumptions. Ensures capital is deployed into renovations that match demonstrated market demand.
                 </div>
             </div>
         </div>
@@ -1445,56 +1731,195 @@
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">9 / 12</div>
+                <div class="slide-number">9 / 13</div>
             </div>
             <h2>Financial Snapshot</h2>
-            <div class="section-label">Per Unit Annual Performance</div>
-            <div class="waterfall-chart">
-                <div class="waterfall-container">
-                    <div class="waterfall-item">
-                        <div class="waterfall-box positive" style="height: 240px;">
-                            580k
-                        </div>
-                        <div class="waterfall-label">Revenue</div>
-                        <div class="waterfall-connector"></div>
+            <div class="section-label">Per Unit Annual Performance — Three Scenarios</div>
+            
+            <div style="margin-top: 30px;">
+                <table style="width: 100%; max-width: 1000px; border-collapse: collapse; font-size: 13px;">
+                    <thead>
+                        <tr style="background: #0a0a0a; color: white;">
+                            <th style="padding: 12px 16px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Scenario</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">ADR</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Occupancy</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Revenue</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Rent</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Ops + Other</th>
+                            <th style="padding: 12px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; background: #171717;">Net Profit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e5e5e5;">
+                            <td style="padding: 14px 16px; font-weight: 600; color: #737373;">Bear Case</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">2,300</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">60%</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">504k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">420k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">280k</td>
+                            <td style="padding: 14px 16px; text-align: right; font-weight: 600; background: #fafafa; color: #dc2626;">-196k</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e5e5; background: #fafafa;">
+                            <td style="padding: 14px 16px; font-weight: 600; color: #0a0a0a;">Base Case</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">3,000</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">70%</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">768k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">420k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">280k</td>
+                            <td style="padding: 14px 16px; text-align: right; font-weight: 600; background: #e5e5e5; color: #0a0a0a;">68k</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 14px 16px; font-weight: 600; color: #0a0a0a;">Bull Case</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">3,200</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">80%</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #0a0a0a;">934k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">420k</td>
+                            <td style="padding: 14px 16px; text-align: right; color: #737373;">280k</td>
+                            <td style="padding: 14px 16px; text-align: right; font-weight: 600; background: #0a0a0a; color: white;">234k</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-top: 24px; padding: 16px 20px; background: #f0f9ff; border-left: 3px solid #0284c7; border-radius: 2px; max-width: 1000px;">
+                <div style="font-size: 13px; line-height: 1.7; color: #0c4a6e; margin-bottom: 10px;">
+                    <strong>Base case represents capital-preservation mode.</strong> Profitability is driven by operational execution, design upgrades, and pricing optimization toward the Bull Case.
+                </div>
+                <div style="font-size: 13px; line-height: 1.7; color: #0c4a6e;">
+                    <strong>Target acquisition criteria:</strong> units capable of ≥3,000 THB ADR post-renovation (or rent priced to allow profitability at 70% occupancy).
+                </div>
+            </div>
+            
+            <div style="margin-top: 24px; padding: 16px 20px; background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 2px; max-width: 1000px;">
+                <div style="font-size: 12px; font-weight: 600; color: #92400e; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;">Pricing Context</div>
+                <div style="font-size: 13px; line-height: 1.6; color: #78350f;">
+                    Realistic nightly range: 2,000–3,000 THB · Blended ADR varies by season, property quality, and operational execution
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; max-width: 1000px;">
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 12px; font-weight: 600; color: #0a0a0a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Cost Breakdown (Ops + Other: 280k)</div>
+                    <div style="font-size: 13px; line-height: 1.7; color: #0a0a0a;">
+                        Cleaning & laundry: 100k · Electricity & water: 70k · Maintenance: 30k · Platform fees: 40k · Consumables & admin: 40k
                     </div>
-                    <div class="waterfall-item" style="margin-top: 60px;">
-                        <div class="waterfall-box negative" style="height: 90px;">
-                            -180k
-                        </div>
-                        <div class="waterfall-label">Rent</div>
-                        <div class="waterfall-connector"></div>
-                    </div>
-                    <div class="waterfall-item" style="margin-top: 110px;">
-                        <div class="waterfall-box negative" style="height: 70px;">
-                            -140k
-                        </div>
-                        <div class="waterfall-label">Operations</div>
-                        <div class="waterfall-connector"></div>
-                    </div>
-                    <div class="waterfall-item" style="margin-top: 150px;">
-                        <div class="waterfall-box negative" style="height: 50px;">
-                            -140k
-                        </div>
-                        <div class="waterfall-label">Other Costs</div>
-                        <div class="waterfall-connector"></div>
-                    </div>
-                    <div class="waterfall-item" style="margin-top: 150px;">
-                        <div class="waterfall-box positive" style="height: 90px; background: #171717;">
-                            120k
-                        </div>
-                        <div class="waterfall-label">Net Profit</div>
+                </div>
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 12px; font-weight: 600; color: #0a0a0a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Capital Protection Case</div>
+                    <div style="font-size: 13px; line-height: 1.7; color: #0a0a0a;">
+                        3,000 THB blended ADR · 70% occupancy (256 nights) · 68k net profit · Represents survivability floor, not operating goal
                     </div>
                 </div>
             </div>
-            <div class="key-metric" style="margin-top: 40px;">Payback period: 12–14 months per unit · 20-22% net margin</div>
+            
+            <div style="margin-top: 24px; padding: 18px 22px; background: #0a0a0a; color: white; border-radius: 2px; max-width: 1000px;">
+                <div style="font-size: 12px; font-weight: 600; color: #a3a3a3; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Target Operating Case (Execution Goal)</div>
+                <div style="font-size: 14px; line-height: 1.8; color: #ffffff;">
+                    ADR: ~3,200 THB · Occupancy: ~75% · Net profit per unit: ~180k–220k THB · Net margin: ~15–20%
+                </div>
+                <div style="font-size: 13px; line-height: 1.6; color: #a3a3a3; margin-top: 10px; font-style: italic;">
+                    Units are only scaled once target operating metrics are achieved.
+                </div>
+            </div>
         </div>
 
-        <!-- Slide 10: Early Proof & Validation -->
+        <!-- Slide 10: Three-Year Financial Forecast -->
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">10 / 12</div>
+                <div class="slide-number">10 / 13</div>
+            </div>
+            <h2>Three-Year Financial Forecast</h2>
+            <div class="section-label">Target Operating Performance — Execution-Driven Growth</div>
+            
+            <div style="margin-top: 24px; padding: 16px 20px; background: #f0f9ff; border-left: 3px solid #0284c7; border-radius: 2px; max-width: 1100px;">
+                <div style="font-size: 12px; font-weight: 600; color: #075985; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;">Forecast Basis</div>
+                <div style="font-size: 13px; line-height: 1.6; color: #0c4a6e;">
+                    This forecast reflects <strong>Target Operating Performance</strong>, not the downside base case shown in the Financial Snapshot. Base case represents capital protection; forecast represents stabilized execution with 3,000–3,200 THB ADR, ~75% occupancy, and 150–200k profit per unit.
+                </div>
+            </div>
+            
+            <div style="margin-top: 28px; overflow-x: auto;">
+                <table style="width: 100%; max-width: 1100px; border-collapse: collapse; font-size: 13px;">
+                    <thead>
+                        <tr style="background: #0a0a0a; color: white;">
+                            <th style="padding: 14px 16px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Year</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Properties Live</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Avg Active</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Annual Revenue</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;">Annual OPEX</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; background: #171717;">Net Profit</th>
+                            <th style="padding: 14px 16px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; background: #171717;">Cumulative</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e5e5e5;">
+                            <td style="padding: 16px; font-weight: 600; color: #0a0a0a;">Year 1</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">10</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">6</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">5,400,000</td>
+                            <td style="padding: 16px; text-align: right; color: #737373;">4,320,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #fafafa; color: #0a0a0a;">1,080,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #fafafa; color: #0a0a0a;">1,080,000</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e5e5;">
+                            <td style="padding: 16px; font-weight: 600; color: #0a0a0a;">Year 2</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">15</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">12.5</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">11,250,000</td>
+                            <td style="padding: 16px; text-align: right; color: #737373;">9,000,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #fafafa; color: #0a0a0a;">2,250,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #fafafa; color: #0a0a0a;">3,330,000</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; font-weight: 600; color: #0a0a0a;">Year 3</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">20</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">17.5</td>
+                            <td style="padding: 16px; text-align: right; color: #0a0a0a;">15,750,000</td>
+                            <td style="padding: 16px; text-align: right; color: #737373;">12,600,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #fafafa; color: #0a0a0a;">3,150,000</td>
+                            <td style="padding: 16px; text-align: right; font-weight: 600; background: #0a0a0a; color: white;">6,480,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; max-width: 1100px;">
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 12px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Target Unit Economics</div>
+                    <div style="font-size: 13px; line-height: 1.7; color: #0a0a0a;">
+                        ADR: 3,000–3,200 THB · Occupancy: ~75% · Net profit: 150–200k per unit · Margin: 15–20%
+                    </div>
+                </div>
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 12px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Growth Assumptions</div>
+                    <div style="font-size: 13px; line-height: 1.7; color: #0a0a0a;">
+                        Year 1: ramp to 10 units · Year 2: 50% growth (15 units) · Year 3: 33% growth (20 units)
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 24px; max-width: 1100px;">
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Execution-Driven</div>
+                    <div style="font-size: 14px; line-height: 1.5; color: #0a0a0a;">Assumes proper renovation, pricing optimization, and operational execution per unit</div>
+                </div>
+                <div style="background: #fafafa; padding: 18px 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 11px; font-weight: 600; color: #737373; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Conservative Buffer</div>
+                    <div style="font-size: 14px; line-height: 1.5; color: #0a0a0a;">180k average profit per unit (mid-range of 150–200k target)</div>
+                </div>
+                <div style="background: #0a0a0a; color: white; padding: 18px 20px; border-radius: 2px;">
+                    <div style="font-size: 11px; font-weight: 600; color: #a3a3a3; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">3-Year Portfolio Value</div>
+                    <div style="font-size: 14px; line-height: 1.5;">6.5M THB cumulative profit · 20-property portfolio · Secured 10-year leases · 7+ years runway</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Early Proof & Validation -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="company-mark">Investment Briefing</div>
+                <div class="slide-number">11 / 13</div>
             </div>
             <h2>Early Proof & Validation</h2>
             <div class="proof-grid">
@@ -1525,114 +1950,114 @@
             </div>
         </div>
 
-        <!-- Slide 11: Risks & Mitigation -->
+        <!-- Slide 12: Lease Security & Legal Framework -->
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">11 / 12</div>
+                <div class="slide-number">12 / 13</div>
             </div>
-            <h2>Risks & Mitigation</h2>
-            <div class="risk-grid">
-                <div class="risk-item">
-                    <div class="risk-title">Seasonality Risk</div>
-                    <div class="risk-description">Managed through dynamic pricing and strict cost control</div>
+            <h2>Lease Security & Legal Framework</h2>
+            <div class="section-label">Structural Protection & Compliance</div>
+            
+            <div style="margin-top: 32px; padding: 20px 24px; background: #0a0a0a; color: white; border-radius: 2px; max-width: 1100px;">
+                <div style="font-size: 13px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em;">Hotel License & Legal Compliance</div>
+                <div style="font-size: 14px; line-height: 1.7;">
+                    Sia Moon Company Ltd. operates under a registered hotel license, ensuring full legal compliance with Thai hospitality regulations for short-term rental operations.
                 </div>
-                <div class="risk-item">
-                    <div class="risk-title">Revenue Volatility</div>
-                    <div class="risk-description">Fixed rent structure reduces downside exposure</div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 32px; max-width: 1100px;">
+                <div style="background: #0a0a0a; color: white; padding: 24px; border-radius: 2px;">
+                    <div style="font-size: 13px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">10-Year Registered Leases</div>
+                    <div style="font-size: 14px; line-height: 1.7; margin-bottom: 20px;">
+                        All leases exceeding 3 years are registered at the Thai Land Office. This provides legal enforceability and tenant protection under Thai law.
+                    </div>
+                    <div style="font-size: 12px; color: #a3a3a3; line-height: 1.6;">
+                        Registration ensures lease terms are binding and transferable, protecting capital investment in property improvements.
+                    </div>
                 </div>
-                <div class="risk-item">
-                    <div class="risk-title">Operational Security</div>
-                    <div class="risk-description">Long-term leases provide stability and planning certainty</div>
+                
+                <div style="background: #fafafa; padding: 24px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Subletting & Commercial Use</div>
+                    <div style="font-size: 14px; line-height: 1.7; color: #0a0a0a; margin-bottom: 20px;">
+                        Lease agreements explicitly permit subletting and short-term commercial rental operations. This is documented and legally binding.
+                    </div>
+                    <div style="font-size: 12px; color: #737373; line-height: 1.6;">
+                        Subletting rights remove operational ambiguity and protect the business model from landlord disputes.
+                    </div>
                 </div>
-                <div class="risk-item">
-                    <div class="risk-title">Market Adaptation</div>
-                    <div class="risk-description">Fallback to longer-stay rentals available if needed</div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; max-width: 1100px;">
+                <div style="background: #fafafa; padding: 24px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Power of Attorney (POA)</div>
+                    <div style="font-size: 14px; line-height: 1.7; color: #0a0a0a;">
+                        POA agreements used where required to streamline property management and legal compliance. All contracts drafted bilingually (Thai/English).
+                    </div>
+                </div>
+                
+                <div style="background: #fafafa; padding: 24px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Improvement Rights</div>
+                    <div style="font-size: 14px; line-height: 1.7; color: #0a0a0a;">
+                        Tenant has explicit rights to renovate, improve, and remove fixtures at lease end. Capital improvements are legally protected tenant assets.
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 12: Investment & Next Steps -->
+        <!-- Slide 13: Investment Terms -->
         <div class="slide">
             <div class="slide-header">
                 <div class="company-mark">Investment Briefing</div>
-                <div class="slide-number">12 / 12</div>
+                <div class="slide-number">13 / 13</div>
             </div>
-            <h2>Investment & Next Steps</h2>
-            <div class="section-label">Rapid Deployment Through Speed-to-Market Advantage</div>
+            <h2>Investment Terms</h2>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 28px 0; max-width: 1100px;">
-                <div>
-                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;">Deployment Strategy</div>
-                    <div style="background: #fafafa; padding: 18px; border-radius: 2px; border: 2px solid #e5e5e5;">
-                        <div style="display: grid; gap: 14px;">
-                            <div style="display: grid; grid-template-columns: 35px 1fr; gap: 12px; align-items: start;">
-                                <div style="background: #0a0a0a; color: white; padding: 4px 0; border-radius: 2px; font-size: 11px; font-weight: 600; text-align: center;">1</div>
-                                <div style="font-size: 14px; line-height: 1.6;"><strong>Capital In:</strong> Secure investment to start renovation on Property 1</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 35px 1fr; gap: 12px; align-items: start;">
-                                <div style="background: #0a0a0a; color: white; padding: 4px 0; border-radius: 2px; font-size: 11px; font-weight: 600; text-align: center;">2</div>
-                                <div style="font-size: 14px; line-height: 1.6;"><strong>Sign Next Lease:</strong> Capital allocated to secure Property 2 contract</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 35px 1fr; gap: 12px; align-items: start;">
-                                <div style="background: #0a0a0a; color: white; padding: 4px 0; border-radius: 2px; font-size: 11px; font-weight: 600; text-align: center;">3</div>
-                                <div style="font-size: 14px; line-height: 1.6;"><strong>Sequential Build:</strong> Property 1 completes → Property 2 renovation begins</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 35px 1fr; gap: 12px; align-items: start;">
-                                <div style="background: #0a0a0a; color: white; padding: 4px 0; border-radius: 2px; font-size: 11px; font-weight: 600; text-align: center;">4</div>
-                                <div style="font-size: 14px; line-height: 1.6;"><strong>Rapid Cycle:</strong> Repeat. Each unit completed in 4 weeks, not months</div>
-                            </div>
-                        </div>
+            <div style="background: #0a0a0a; color: white; padding: 40px; border-radius: 2px; margin: 40px 0; max-width: 900px;">
+                <div style="font-size: 16px; font-weight: 600; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 0.08em;">Loan Investment Structure</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Investment Type</div>
+                        <div style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">Short-Term Loan</div>
+                        
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Principal Amount</div>
+                        <div style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">200,000 THB</div>
+                        
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Term</div>
+                        <div style="font-size: 20px; font-weight: 600;">12 Months</div>
                     </div>
-                    <div style="background: #0a0a0a; color: white; padding: 14px 18px; border-radius: 2px; margin-top: 16px; text-align: center;">
-                        <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Competitive Advantage</div>
-                        <div style="font-size: 15px; line-height: 1.5;"><strong>SPEED.</strong> 4-week renovations enable rapid scaling without long capital lockup</div>
-                    </div>
-                </div>
-                
-                <div>
-                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;">3-Year Growth Plan</div>
-                    <div class="timeline" style="margin: 0;">
-                        <div class="timeline-item">
-                            <div class="timeline-year">Year 1</div>
-                            <div class="timeline-metric">3</div>
-                            <div class="timeline-label">Properties</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">Year 2</div>
-                            <div class="timeline-metric">6</div>
-                            <div class="timeline-label">Properties</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">Year 3</div>
-                            <div class="timeline-metric">10</div>
-                            <div class="timeline-label">Properties</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">Target</div>
-                            <div class="timeline-metric">1.2M</div>
-                            <div class="timeline-label">Annual Profit</div>
-                        </div>
+                    <div>
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Fixed Return</div>
+                        <div style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">20%</div>
+                        
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Total Repayment</div>
+                        <div style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">240,000 THB</div>
+                        
+                        <div style="font-size: 13px; color: #a3a3a3; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Repayment Source</div>
+                        <div style="font-size: 20px; font-weight: 600;">Operating Cash Flow</div>
                     </div>
                 </div>
             </div>
             
-            <div class="financial-grid" style="margin-top: 32px;">
-                <div class="financial-item">
-                    <div class="financial-label">Capital Deployment</div>
-                    <div class="financial-value">Scale Operations</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px;">
+                <div style="background: #fafafa; padding: 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Use of Capital</div>
+                    <div style="font-size: 14px; line-height: 1.6; color: #0a0a0a;">
+                        Lease deposit, renovation, and furnishing for Property 2. Working capital for operational expansion during 4-week renovation period.
+                    </div>
                 </div>
-                <div class="financial-item">
-                    <div class="financial-label">Investment Structure</div>
-                    <div class="financial-value">Revenue Share</div>
+                <div style="background: #fafafa; padding: 20px; border-radius: 2px; border: 2px solid #e5e5e5;">
+                    <div style="font-size: 13px; font-weight: 600; color: #0a0a0a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;">Security</div>
+                    <div style="font-size: 14px; line-height: 1.6; color: #0a0a0a;">
+                        Repayment secured by cash flow from existing operational property plus projected revenue from Property 2 within 8 weeks of capital deployment.
+                    </div>
                 </div>
-                <div class="financial-item">
-                    <div class="financial-label">Exit Window</div>
-                    <div class="financial-value">Year 3+</div>
-                </div>
-                <div class="financial-item">
-                    <div class="financial-label">Lease Security</div>
-                    <div class="financial-value">~7 Years Remaining</div>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 20px; background: #fafafa; border-left: 4px solid #0a0a0a; max-width: 900px;">
+                <div style="font-size: 14px; font-weight: 600; color: #0a0a0a; margin-bottom: 8px;">Next Steps</div>
+                <div style="font-size: 13px; line-height: 1.7; color: #0a0a0a;">
+                    Property 2 identified and lease terms negotiated. Capital deployment triggers immediate renovation start. Property operational within 4 weeks. Loan repayment begins month 3 from operating cash flow.
                 </div>
             </div>
         </div>
